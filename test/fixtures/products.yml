@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_name: MyString
+  product_price: 1
+  manu_date: 2016-12-06
+  expiry_date: 2016-12-06
+  manu_time: MyString
+
+two:
+  product_name: MyString
+  product_price: 1
+  manu_date: 2016-12-06
+  expiry_date: 2016-12-06
+  manu_time: MyString
