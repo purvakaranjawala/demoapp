@@ -2,6 +2,9 @@ class ProductsController < ApplicationController
   before_filter :authenticate_user!
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  def dashboard
+  end
+
   def index
     @products = Product.all
   end
@@ -18,10 +21,10 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.js 
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -49,6 +52,7 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

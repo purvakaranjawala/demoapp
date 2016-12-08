@@ -1,0 +1,9 @@
+<%= div_for product do %>
+
+  <h3><%= product.product_name %></h3>
+
+  <ul>
+   <li><%= link_to "Edit product", new_product_path, remote: true %></li>
+   <li><%= link_to "Delete product", product, remote: true, method: :delete %></li>
+  </ul>
+<% end %>

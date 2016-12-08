@@ -3,13 +3,18 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }, param: :first_name
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  
   # You can have the root of your site routed with "root"
-   root 'products#index'
+   root 'products#dashboard'
    resources :products , param: :product_name
-
+   get 'products/dashboard'
+   get '*path' => redirect('/'), :notice => "test flash notice"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  gem 'omniauth'
+  gem 'omniauth-twitter'
+  gem 'omniauth-facebook'
+  gem 'omniauth-linkedin'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
