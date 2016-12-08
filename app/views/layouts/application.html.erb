@@ -9,12 +9,14 @@
 <body>
 	<% if user_signed_in? %>
 	  <li>
-	  Signed in as <%= current_user.email %>. Not you?
+	  <%= current_user.email %>
+	  <%= current_user.first_name%>
+	  <%= image_tag current_user.image_url%><br>
+	  </li>
 	  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-xs  btn-primary")%></li>
 	<% else %>
 	  <li>
 	  <%= link_to('Login', new_user_session_path,class: "btn btn-xs btn-primary")%>  
-	  </li>
 	<% end %>
 
 <%= yield %>

@@ -13,23 +13,23 @@
 
   <div class="field">
     <%= f.label :product_name %><br>
-    <%= f.text_field :product_name %>
+    <%= f.text_field :product_name, required: true %>
   </div>
   <div class="field">
     <%= f.label :product_price %><br>
-    <%= f.number_field :product_price %>
+    <%= f.number_field :product_price, required: true %>
   </div>
   <div class="field">
     <%= f.label :manu_date %><br>
-    <%= f.date_select :manu_date %>
+    <%= f.date_select :manu_date, required: true%>
   </div>
   <div class="field">
     <%= f.label :expiry_date %><br>
-    <%= f.date_select :expiry_date %>
+    <%= f.date_select :expiry_date , required: true%>
   </div>
   <div class="field">
     <%= f.label :manu_time %><br>
-    <%= f.text_field :manu_time %>
+    <%= f.text_field :manu_time, required: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
